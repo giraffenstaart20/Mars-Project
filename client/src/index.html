@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Map</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="assets/css/screen.css" />
+    <link rel="icon" type="image/x-icon" href="assets/media/logo_GeoAid.png">
+    <script src="assets/js/script.js" type="module"></script>
+
+    <!--leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="assets/js/leaflet-heat.js" ></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="material-icons icon menu">menu</div>
+        <form>
+            <div id="searchbar">
+                <input type="text" placeholder="Search" />
+                <button type="submit" class="searchButton">
+                    <em class="material-icons icon search">search</em>
+                </button>
+                <div class="material-icons icon center">pin_drop</div>
+            </div>
+            <ul id="suggestions">
+            </ul>
+        </form>
+    </header>
+
+    <main>
+        <nav id="side_navigation" class="hidden">
+            <ul class="flexcontainer">
+                <li>
+                    <div class="material-icons icon close">close</div>
+                    <a href="profile.html">
+                        <div class="material-icons icon account_circle">
+                            account_circle
+                        </div>
+                        <h2 class="hover-underline-animation">Kurt</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="statistics.html">
+                        <div class="material-icons icon query_stats">query_stats</div>
+                        <h2 class="hover-underline-animation">Statistics</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="company.html">
+                        <div class="material-icons icon apartment">apartment</div>
+                        <h2 class="hover-underline-animation">Company</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="localisation.html">
+                        <div class="material-icons icon pin_drop">pin_drop</div>
+                        <h2 class="hover-underline-animation">Localisation</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <div class="material-icons icon info">info</div>
+                        <h2 class="hover-underline-animation">About us</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <div class="material-icons icon settings">settings</div>
+                        <h2 class="hover-underline-animation">Settings</h2>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <div class="loading">Loading&#8230;</div>
+    <div id="map"></div>
+</body>
+
+</html>

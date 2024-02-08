@@ -1,0 +1,72 @@
+@import "general";
+@import "constants";
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 35%;
+  width: 40%;
+  overflow: auto;
+  background-color: $secondary-color;
+  border: 0.3rem solid $primary-color;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+  }
+
+  br {
+    display: block;
+    content: "";
+    margin-top: 0.5rem;
+  }
+
+  .close {
+    position: absolute;
+    font-size: 2rem;
+    top: 0.8rem;
+    right: 0.5rem;
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(-100%);
+
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    display: block;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+.slide-out {
+  display: block;
+  opacity: 1;
+  transform: translateY(0%);
+
+  animation: slideOut 0.5s ease-in-out forwards;
+}
+
+@keyframes slideOut {
+  to {
+    z-index: -1;
+    display: none;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}

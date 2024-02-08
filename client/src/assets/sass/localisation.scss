@@ -1,0 +1,91 @@
+@import "general";
+@import "constants";
+@import "nav";
+@import "animations";
+@import "popup";
+
+
+body {
+  font-family: $primary-font-family;
+  background: $background-color;
+  main {
+    form {
+      margin: 2rem 0;
+      text-align: center;
+      width: 100%;
+
+      @include animationlocalisation;
+      fieldset {
+        width: 65%;
+        background-color: $secondary-color;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: $border-radius;
+        position: relative;
+
+        h1 {
+          padding: 1rem 0;
+          font-size: 2rem;
+          width: 100%;
+          background-color: $header-background-color;
+          color: $header-font-color;
+          border-radius: $border-radius $border-radius 0 0;
+        }
+
+        img {
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          line-height: 2.5rem;
+        }
+
+        .flexcontainer {
+          width: 60%;
+          margin: 2rem auto;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+        }
+
+        label {
+          margin-bottom: 0.5rem;
+          font-size: 1.3rem;
+        }
+
+        input, textarea {
+          border-radius: 1rem;
+          background-color: $primary-color;
+          margin-bottom: 1rem;
+          padding: 0.5rem;
+          color: $primary-font-color;
+        }
+
+        button {
+          color: $primary-font-color;
+          background-color: $primary-color;
+          border-radius: $border-radius;
+          padding: 0.5rem;
+        }
+
+        #summary {
+          height: 40vh;
+        }
+
+        .help {
+          position: absolute;
+          top: 1.2rem;
+          right: 1.5rem;
+          color: $primary-font-color;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+

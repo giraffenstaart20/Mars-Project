@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Profile</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/media/logo_GeoAid.png">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="assets/css/profile.css" />
+
+    <script src="assets/js/profile.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="assets/media/logo_GeoAid.png" alt="logo" /></a>
+                </li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="company.html">Company</a></li>
+                <li><a href="localisation.html">Localisation</a></li>
+                <li><a href="contact.html">About us</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="index.html">Back to map</a></li>
+                <li>
+                    <a href="profile.html" class="material-icons icon account_circle">account_circle</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="profile">
+            <div id="profiletop">
+                <div class="material-icons icon account_circle">account_circle</div>
+                <h1>Kurt Sys</h1>
+            </div>
+            <div class="flexcontainer">
+                <article id="premium" class="profileSetting">
+                    <div class="headerArticle">
+                        <div class="material-icons icon workspace_premium">
+                            workspace_premium
+                        </div>
+                        <h2 class="hover-underline-animation">Premium</h2>
+                    </div>
+
+                    <div class="flexPackets">
+                        <article class="packet">
+                            <div class="packetHeader">
+                                <h3>Company premium</h3>
+                                <p>60 coins/month</p>
+                            </div>
+                            <div class="advantages">
+                                <ul>
+                                    <li>
+                                        <p>No adds</p>
+                                    </li>
+                                    <li>
+                                        <p>More Statistics</p>
+                                    </li>
+                                    <li>
+                                        <p>Company Statistics</p>
+                                    </li>
+                                    <li>
+                                        <p>Localisation Company</p>
+                                    </li>
+                                </ul>
+                                <button>Current use</button>
+                            </div>
+                        </article>
+                        <article class="packet">
+                            <div class="packetHeader">
+                                <h3>Standard premium</h3>
+                                <p>20 coins/month</p>
+                            </div>
+                            <div class="advantages">
+                                <ul>
+                                    <li>
+                                        <p>No adds</p>
+                                    </li>
+                                    <li>
+                                        <p>More Statistics</p>
+                                    </li>
+                                    <li>
+                                        <p>Share with family</p>
+                                    </li>
+                                    <li>
+                                        <p>Localisation home</p>
+                                    </li>
+                                </ul>
+                                <button>Buy</button>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+
+                <article id="company" class="profileSetting">
+                    <div class="headerArticle">
+                        <div class="material-icons icon apartment">apartment</div>
+                        <h2 class="hover-underline-animation">Company</h2>
+                    </div>
+                    <div class="flexcontainer">
+                        <div>
+                            <h3>Name</h3>
+                            <p>GeoAid</p>
+                        </div>
+                        <div>
+                            <h3>Section</h3>
+                            <p>Business</p>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Rijselstraat 5 8200 Bruges Belgium Earth</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="appointment" class="profileSetting">
+                    <div class="material-icons icon help" data-help="appointment">help</div>
+                    <div class="headerArticle">
+                        <div class="material-icons icon date_range">date_range</div>
+                        <h2 class="hover-underline-animation">Appointment</h2>
+                    </div>
+                    <form action="#">
+                        <div class="subjectflex">
+                            <label for="subject">Enter your subject</label>
+                            <input id="subject" type="text" placeholder="ex: meeting with ceo" />
+                        </div>
+                        <div class="boxflex">
+                            <div class="flexcontainer">
+                                <div class="inputflex">
+                                    <label for="date">Pick a date</label>
+                                    <input id="date" type="date" />
+                                </div>
+                                <div class="inputflex">
+                                    <label for="time">Pick an hour</label>
+                                    <input id="time" type="text" placeholder="ex: 12:00">
+                                </div>
+                            </div>
+                            <div class="flexcontainer">
+                                <div class="inputflex">
+                                    <label for="expertise">Expertise employee</label>
+                                    <select id="expertise">
+                                        <option selected>None</option>
+                                        <option>Localisation company</option>
+                                        <option>Localisation home</option>
+                                        <option>Developer</option>
+                                        <option>CEO</option>
+                              </select>
+                                </div>
+                                <div class="inputflex">
+                                    <label for="employee">Employee</label>
+                                    <select id="employee">
+                                <option selected>Jarne</option>
+                                <option>Senne</option>
+                                <option>Luca</option>
+                                <option>Lucas</option>
+                                <option>Remi</option>
+                              </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button>Make appointment</button>
+                    </form>
+                </article>
+                <article id="appointment-list" class="profileSetting">
+                    <div class="headerArticle">
+                        <div class="material-icons icon date_range">date_range</div>
+                        <h2 class="hover-underline-animation">Appointment list</h2>
+                    </div>
+                    <div class="spinner-wave-in hidden"></div>
+                    <div id="appointments"></div>
+                </article>
+            </div>
+        </section>
+        <div id="popup-appointment" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Appointments</h2>
+            <div class="content">
+                <p>
+                    On this page you are able to send a request to gather information about where to settle your new business or home. <br /> You can choose the topic of your request and the employee you want to help you. <br /> You will receive an email
+                    with the answer to your request. <br /> Our team will help you making the right decision.
+                </p>
+            </div>
+        </div>
+        <div id="clone-appointment" class="appointment hidden">
+            <div class="material-icons icon delete">delete</div>
+            <h3 class="subject">Subject</h3>
+            <div class="appointmentflex">
+                <label>Date:</label>
+                <p class="date">Date</p>
+            </div>
+            <div class="appointmentflex">
+                <label>Time:</label>
+                <p class="time">Time</p>
+            </div>
+            <div class="appointmentflex">
+                <label>Expertise:</label>
+                <p class="expertise">Expertise</p>
+            </div>
+            <div class="appointmentflex">
+                <label>Employee:</label>
+                <p class="employee">Employee</p>
+            </div>
+        </div>
+        <div id="popup-submit" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Appointment</h2>
+            <div class="content">
+                <p>Your appointment has been confirmed!<br/>
+                    <strong>Subject: </strong><em class="subject">subject</em><br/>
+                    <strong>Date: </strong><em class="date">date</em><br/>
+                    <strong>Time: </strong><em class="time">time</em><br/>
+                    <strong>Expertise: </strong>
+                    <em class="expertise">expertise</em>
+                    <br/><strong>Employee: </strong><em class="employee">employee</em><br/>See you soon :))
+                </p>
+            </div>
+        </div>
+        <div id="popup-delete" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Delete appointment</h2>
+            <div class="content">
+                <p>Are you sure you want to delete this appointment?</p>
+                <div id="delete-choice">
+                    <button id="no">No</button>
+                    <button id="yes">Yes</button>
+                </div>
+            </div>
+        </div>
+        <div id="popup-deleted" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Appointment deleted</h2>
+            <div class="content">
+                <p>Appointment has been successfully deleted :))</p>
+            </div>
+        </div>
+        <div id="popup-failed" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Making appointment failed</h2>
+            <div class="content">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

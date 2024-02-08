@@ -1,0 +1,28 @@
+@import "general";
+@import "constants";
+
+
+$inactive: $primary-font-color;
+$active: $secondary-color;
+$speed: 1.2s;
+$size: 50px;
+$unit: $size / 16;
+
+%spinner {  
+  display: block;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: $unit solid $inactive;
+  animation: spinner $speed linear infinite;
+}
+@keyframes spinner {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+%spinner-wave-in,
+.spinner-wave-in {
+  @extend %spinner;
+  box-shadow: inset (-$unit/2) (-$unit/2) 0 ($unit/2) $active;
+}

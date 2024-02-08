@@ -1,0 +1,753 @@
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blur main > * {
+  filter: blur(0.2rem);
+}
+.blur main .popup {
+  filter: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: white solid 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem grey;
+  border-radius: 5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+.spinner-wave-in {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3.125px solid hsl(142deg, 10%, 75%);
+  animation: spinner 1.2s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-wave-in {
+  box-shadow: inset -1.5625px -1.5625px 0 1.5625px var(--secondary-color);
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blur main > * {
+  filter: blur(0.2rem);
+}
+.blur main .popup {
+  filter: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: white solid 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem grey;
+  border-radius: 5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: black solid;
+  background-color: var(--primary-color);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  font-size: 1.7rem;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+nav ul li a {
+  font-family: Arial, sans-serif;
+  color: hsl(142deg, 10%, 75%);
+}
+nav ul li .icon {
+  color: hsl(142deg, 10%, 75%);
+}
+nav ul li:nth-child(7) a {
+  border-bottom: hsl(142deg, 10%, 75%) solid;
+}
+nav ul li:first-child img {
+  width: 5rem;
+}
+nav ul .icon {
+  font-size: 4rem;
+}
+nav ul .selected {
+  font-weight: bold;
+}
+nav ul .selected a {
+  color: var(--secondary-color);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes fade-inout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translateX(-3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blur main > * {
+  filter: blur(0.2rem);
+}
+.blur main .popup {
+  filter: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: white solid 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem grey;
+  border-radius: 5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 35%;
+  width: 40%;
+  overflow: auto;
+  background-color: var(--secondary-color);
+  border: 0.3rem solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 2rem 0px black;
+}
+.popup h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.popup p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+.popup br {
+  display: block;
+  content: "";
+  margin-top: 0.5rem;
+}
+.popup .close {
+  position: absolute;
+  font-size: 2rem;
+  top: 0.8rem;
+  right: 0.5rem;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    display: block;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.slide-out {
+  display: block;
+  opacity: 1;
+  transform: translateY(0%);
+  animation: slideOut 0.5s ease-in-out forwards;
+}
+
+@keyframes slideOut {
+  to {
+    z-index: -1;
+    display: none;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+#profile {
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  padding: 1rem;
+}
+#profile article {
+  animation: slidein 1s ease 1 both;
+}
+#profile article:nth-child(2) {
+  animation-delay: 0.3s;
+}
+#profile article:nth-child(3) {
+  animation-delay: 0.6s;
+}
+#profile article:nth-child(4) {
+  animation-delay: 0.9s;
+}
+@keyframes slidein {
+  from {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+#profile #profiletop {
+  color: hsl(142deg, 10%, 75%);
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+#profile #profiletop .icon {
+  font-size: 7rem;
+}
+#profile .flexcontainer {
+  display: flex;
+  flex-direction: column;
+}
+#profile .flexcontainer .profileSetting {
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  padding: 1rem 0 2rem 2rem;
+  margin: 0 2rem 2rem 2rem;
+}
+#profile .flexcontainer .profileSetting .headerArticle {
+  display: flex;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#profile .flexcontainer .profileSetting .headerArticle .icon {
+  color: hsl(142deg, 10%, 75%);
+  font-size: 2.2rem;
+  margin: auto 0;
+  padding-right: 1rem;
+}
+#profile .flexcontainer .profileSetting .headerArticle h2 {
+  color: hsl(142deg, 10%, 75%);
+}
+#profile #premium .flexPackets {
+  display: flex;
+  justify-content: space-around;
+}
+#profile #premium .flexPackets .packet {
+  width: 40%;
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  padding-bottom: 1rem;
+}
+#profile #premium .flexPackets .packet .packetHeader {
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: var(--tertiary-color);
+  color: hsl(142deg, 10%, 75%);
+  padding: 0.5rem;
+  border-radius: 2rem 2rem 0 0;
+  margin-bottom: 0.5rem;
+}
+#profile #premium .flexPackets .advantages {
+  width: 100%;
+}
+#profile #premium .flexPackets .advantages ul {
+  margin-left: 1rem;
+}
+#profile #premium .flexPackets .advantages ul li {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+#profile #premium .flexPackets .advantages ul li p {
+  color: black;
+  display: list-item;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+#profile #premium .flexPackets .advantages button {
+  width: 50%;
+  background-color: var(--tertiary-color);
+  color: hsl(142deg, 10%, 75%);
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  margin-left: 25%;
+  margin-top: 0.5em;
+}
+#profile #company .flexcontainer {
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#profile #company .flexcontainer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#profile #company .flexcontainer p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+#profile #appointment {
+  position: relative;
+}
+#profile #appointment .help {
+  position: absolute;
+  color: hsl(142deg, 10%, 75%);
+  top: 1.3rem;
+  right: 2rem;
+}
+#profile #appointment form {
+  background-color: var(--secondary-color);
+  display: flex;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+#profile #appointment form .subjectflex {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+#profile #appointment form .subjectflex label {
+  align-self: center;
+}
+#profile #appointment form .boxflex {
+  display: flex;
+  flex-direction: row;
+}
+#profile #appointment form .inputflex {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+#profile #appointment form label {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+#profile #appointment form input, #profile #appointment form button, #profile #appointment form select {
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  color: hsl(142deg, 10%, 75%);
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  line-height: 2rem;
+  border-radius: 2rem;
+}
+#profile #appointment form select {
+  height: 3rem;
+  padding: 0.5rem;
+}
+#profile #appointment form button {
+  width: 20%;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: var(--tertiary-color);
+  color: hsl(142deg, 10%, 75%);
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+#profile #appointment form .flexcontainer {
+  display: flex;
+}
+#profile #appointment form .flexcontainer label {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+#profile #appointment form .flexcontainer input, #profile #appointment form .flexcontainer button, #profile #appointment form .flexcontainer select {
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  color: hsl(142deg, 10%, 75%);
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  line-height: 2rem;
+  border-radius: 2rem;
+}
+#profile #appointment form .flexcontainer select {
+  height: 3rem;
+  padding: 0.5rem;
+}
+#profile #appointment form .flexcontainer button {
+  align-items: center;
+  margin-top: 1rem;
+  background-color: var(--tertiary-color);
+  color: hsl(142deg, 10%, 75%);
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+#profile #appointment-list .spinner-wave-in {
+  margin: 0 auto;
+}
+#profile #appointment-list #appointments {
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#profile #appointment-list #appointments h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#profile #appointment-list #appointments p {
+  font-size: 1rem;
+}
+#profile #appointment-list #appointments .appointment {
+  width: 40%;
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+#profile #appointment-list #appointments .appointment .delete {
+  float: right;
+  cursor: pointer;
+  color: hsl(142deg, 10%, 75%);
+}
+#profile #appointment-list #appointments .appointment .appointmentflex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+}
+#profile #appointment-list #appointments .appointment .appointmentflex label {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+#profile #appointment-list #appointments .appointment h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: hsl(142deg, 10%, 75%);
+}
+#profile #appointment-list #appointments .appointment p {
+  color: hsl(142deg, 10%, 75%);
+  font-size: 1.2rem;
+}
+
+.popup {
+  font-family: Arial, sans-serif;
+}
+.popup .content #delete-choice {
+  text-align: center;
+  margin-top: 1rem;
+}
+.popup .content #delete-choice button {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  line-height: 2rem;
+  padding: 0.25rem 1rem;
+  margin: 0.5rem;
+}
+
+/*# sourceMappingURL=profile.css.map */

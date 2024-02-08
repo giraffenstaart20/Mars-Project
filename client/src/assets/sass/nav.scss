@@ -1,0 +1,49 @@
+@import "constants";
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: black solid;
+  background-color: $nav-background-color;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      font-size: 1.7rem;
+      margin-bottom: auto;
+      margin-top: auto;
+
+      a {
+        font-family: $nav-font-family;
+        color: $nav-font-color;
+      }
+      .icon{
+        color: $nav-font-color;
+      }
+    }
+
+    li:nth-child(7) a{
+      border-bottom: $nav-border-color solid;
+    }
+
+    li:first-child img {
+      width: 5rem;
+    }
+
+    .icon {
+      font-size: 4rem;
+    }
+    .selected {
+      font-weight: bold;
+      a {
+        color: $secondary-font-color;
+      }
+    }
+  }
+}

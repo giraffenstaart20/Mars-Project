@@ -1,0 +1,59 @@
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: black solid;
+  background-color: var(--primary-color);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  font-size: 1.7rem;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+nav ul li a {
+  font-family: Arial, sans-serif;
+  color: hsl(142deg, 10%, 75%);
+}
+nav ul li .icon {
+  color: hsl(142deg, 10%, 75%);
+}
+nav ul li:nth-child(7) a {
+  border-bottom: hsl(142deg, 10%, 75%) solid;
+}
+nav ul li:first-child img {
+  width: 5rem;
+}
+nav ul .icon {
+  font-size: 4rem;
+}
+nav ul .selected {
+  font-weight: bold;
+}
+nav ul .selected a {
+  color: var(--secondary-color);
+}
+
+/*# sourceMappingURL=nav.css.map */

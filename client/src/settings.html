@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/settings.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="icon" type="image/x-icon" href="assets/media/logo_GeoAid.png">
+    <script src="assets/js/settings.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="assets/media/logo_GeoAid.png" alt="logo" /></a>
+                </li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="company.html">Company</a></li>
+                <li><a href="localisation.html">Localisation</a></li>
+                <li><a href="contact.html">About us</a></li>
+                <li class="selected"><a href="settings.html">Settings</a></li>
+                <li><a href="index.html">Back to map</a></li>
+                <li><a href="profile.html" class="material-icons icon account_circle">account_circle</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="settings">
+        <ul class="flexcontainer">
+            <li>
+                <div>
+                    <div class="material-icons icon dark_mode">dark_mode</div>
+                    <h2>Dark mode</h2>
+                </div>
+                <div class="icon2">
+                    <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="material-icons icon notifications">notifications</div>
+                    <h2>Notifications</h2>
+                </div>
+                <div class="icon2">
+                    <div class="dropdown">
+                        <button class="dropbtn">All</button>
+                        <div class="dropdown-content">
+                            <p class="hover-underline-animation">All</p>
+                            <p class="hover-underline-animation">Only this</p>
+                            <p class="hover-underline-animation">Only that</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="material-icons icon account_circle">account_circle</div>
+                    <h2>Change profile picture</h2>
+                </div>
+                <div class="material-icons icon2 edit_square">edit_square</div>
+            </li>
+            <li>
+                <div>
+                    <div class="material-icons icon house">house</div>
+                    <div class="extra-info">
+                        <h2>Change home address</h2>
+                        <p>Current address: 1234 Main Street, New York, NY 10001</p>
+                    </div>
+
+                </div>
+                <div class="material-icons icon2 edit_square">edit_square</div>
+            </li>
+            <li>
+                <div>
+                    <div class="material-icons icon language">language</div>
+                    <div class="extra-info">
+                        <h2>Language</h2>
+                        <p>Current language: English</p>
+                    </div>
+                </div>
+                <div class="material-icons icon2 edit_square">edit_square</div>
+            </li>
+            <li>
+                <div>
+                    <div class="material-icons icon money">money</div>
+                    <div class="extra-info">
+                        <h2>Expenses</h2>
+                        <p>Company Premium: 60 Marscoins/month</p>
+                        <p>Targeted Ads: 10.000 Marscoins/month</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="material-icons icon gavel">gavel</div>
+                    <h2>Legal notice</h2>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="material-icons icon help">help</div>
+                    <h2>Help</h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

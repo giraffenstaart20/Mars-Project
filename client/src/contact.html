@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="icon" type="image/x-icon" href="assets/media/logo_GeoAid.png">
+    <script src="assets/js/contact.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="assets/media/logo_GeoAid.png" alt="logo" /></a>
+                </li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="company.html">Company</a></li>
+                <li><a href="localisation.html">Localisation</a></li>
+                <li class="selected"><a href="contact.html">About us</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="index.html">Back to map</a></li>
+                <li><a href="profile.html" class="material-icons icon account_circle">account_circle</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="flexcontainer">
+            <article id="contact_us">
+                <form action="#">
+                    <fieldset>
+                        <legend>
+                            <h2>Contact us</h2>
+                        </legend>
+                        <div>
+                            <label for="topic">Topic</label>
+                            <input type="text" name="topic" id="topic" />
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message"></textarea>
+                            <button type="submit" id="send">Send</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </article>
+            <article id="contact">
+                <h2>Contact</h2>
+                <div>
+                    <dl>
+                        <dt>Address:</dt>
+                        <dd>Rijselstraat 5 8200 Bruges Belgium Earth</dd>
+                        <dt>Phone:</dt>
+                        <dd><a href="#">050 38 12 77</a></dd>
+                        <dt>Email:</dt>
+                        <dd><a href="#">Contact@GeoAid.Be</a></dd>
+                    </dl>
+                    <div id="figs">
+                        <a href="#"><img src="assets/media/Twitter-Logo.png" alt="twitter logo" /></a>
+                        <a href="#"><img src="assets/media/Facebook-Logo.png" alt="facebook logo" /></a>
+                        <a href="#"><img src="assets/media/Instagram-Logo.png" alt="instagram logo" /></a>
+                        <a href="#"><img src="assets/media/share.png" alt="share logo" /></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div>
+            <article id="business_hours">
+                <h2>Business hours</h2>
+                <div>
+                    <ul class="flexcontainer">
+                        <li>
+                            <p>SUN</p>
+                            <div>
+                                <h3>Closed</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <p>MON</p>
+                            <div>
+                                <h3>9h-17h</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <p>TUE</p>
+                            <div>
+                                <h3>9h-17h</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <p>WED</p>
+                            <div>
+                                <h3>9h-17h</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <p>THU</p>
+                            <div>
+                                <h3>9h-17h</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <p>FRI</p>
+                            <div>
+                                <h3>9h-12h</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <p>SAT</p>
+                            <div>
+                                <h3>Closed</h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <section id="extras">
+                        <h4>Also closed on:</h4>
+                        <ul>
+                            <li>
+                                <p>All holidays</p>
+                            </li>
+                            <li>
+                                <p>5 october</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>

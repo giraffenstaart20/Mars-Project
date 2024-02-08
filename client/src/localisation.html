@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Localisation</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/localisation.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="icon" type="image/x-icon" href="assets/media/logo_GeoAid.png">
+    <script src="assets/js/localisation.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="assets/media/logo_GeoAid.png" alt="logo" /></a>
+                </li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="company.html">Company</a></li>
+                <li class="selected"><a href="localisation.html">Localisation</a></li>
+                <li><a href="contact.html">About us</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="index.html">Back to map</a></li>
+                <li>
+                    <a href="profile.html" class="material-icons icon account_circle">account_circle</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend></legend>
+                <div class="material-icons icon help" data-help="localisation">help</div>
+                <h1>Localisation</h1>
+                <img src="images/Dome.png" alt="Dome" />
+                <p>
+                    You want to begin your own business or build a new home?<br /> With our group of experts,<br /> we will help you find the right place to settle!
+                </p>
+                <div class="flexcontainer">
+                    <label for="topic">Topic</label>
+                    <input type="text" name="topic" id="topic" />
+                    <label for="summary">Summary</label>
+                    <textarea name="summary" id="summary"></textarea>
+                    <button type="submit">Send request</button>
+                </div>
+            </fieldset>
+        </form>
+        <div id="popup-localisation" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Localisation</h2>
+            <div class="content">
+                <p>
+                    On this page you are able to send a request to gather information about where to settle your new business or home. <br /> You can choose the topic of your request and the employee you want to help you. <br /> You will receive an email
+                    with the answer to your request. <br /> Our team will help you making the right decision.
+                </p>
+            </div>
+        </div>
+        <div id="popup-request" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Localisation request</h2>
+            <div class="content">
+                <p>Your request has been sent!<br/> We will contact you soon :))
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

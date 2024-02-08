@@ -1,0 +1,17 @@
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+/*# sourceMappingURL=constants.css.map */

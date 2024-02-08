@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Statistics</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="assets/css/statistics.css" />
+    <link rel="icon" type="image/x-icon" href="assets/media/logo_GeoAid.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="assets/js/statistics.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="assets/media/logo_GeoAid.png" alt="logo" /></a>
+                </li>
+                <li class="selected"><a href="statistics.html">Statistics</a></li>
+                <li><a href="company.html">Company</a></li>
+                <li><a href="localisation.html">Localisation</a></li>
+                <li><a href="contact.html">About us</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="index.html">Back to map</a></li>
+                <li>
+                    <a href="profile.html" class="material-icons icon account_circle">account_circle</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="statistics">
+            <div class="material-icons icon help" data-help="statistics">help</div>
+            <h1>Statistics</h1>
+            <div id="container_statistics">
+                <aside>
+                    <select id="period" class="dropdown">
+              <option class="hover-underline-animation" value="0" selected>
+                All time
+              </option>
+              <option class="hover-underline-animation" value="1">
+                Last month
+              </option>
+              <option class="hover-underline-animation" value="3">
+                Last 3 months
+              </option>
+              <option class="hover-underline-animation" value="6">
+                Last 6 months
+              </option>
+              <option class="hover-underline-animation" value="12">
+                Last year
+              </option>
+            </select>
+                    <ul>
+
+                        <li id="oxygen-leaks" class="selected">
+                            <p>Oxygen leaks</p>
+                            <hr />
+                        </li>
+                        <li id="medical-dispaches">
+                            <p>Medical dispaches</p>
+                            <hr />
+                        </li>
+                        <li id="meteor-showers">
+                            <p>Meteor showers</p>
+                            <hr />
+                        </li>
+                        <li id="dust-storms">
+                            <p>Dust storms</p>
+                            <hr />
+                        </li>
+                        <li id="crimes">
+                            <p>Crimes</p>
+                            <hr />
+                        </li>
+                        <li id="population">
+                            <p>Population</p>
+                            <hr />
+                        </li>
+                    </ul>
+                </aside>
+
+                <div id="container_charts">
+                    <div id="category_chart" class="stats">
+                        <h2>Oxygen leaks</h2>
+                        <div class="material-icons fullscreen">fullscreen</div>
+                        <div class="material-icons fullscreen-exit hidden">
+                            fullscreen_exit
+                        </div>
+                        <div id="bar-chart-container">
+                            <div class="spinner-wave-in hidden"></div>
+                        </div>
+                    </div>
+                    <div id="types_chart" class="stats">
+                        <div id="dome-choice">
+                            <h3 id="0">Dome 1</h3>
+                            <h2>Danger level (oxygen leaks)</h2>
+
+                            <form id="searchbar">
+                                <input type="text" placeholder="Search dome" />
+                                <button type="submit" class="searchButton">
+                    <em class="material-icons icon search">search</em>
+                  </button>
+                            </form>
+                            <div id="pie-chart-container">
+                                <div class="spinner-wave-in hidden"></div>
+                            </div>
+                            <ul id="suggestions"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <div id="popup-statistics" class="popup hidden">
+            <div class="material-icons icon close">close</div>
+            <h2>Statistics</h2>
+            <div class="content">
+                <p>
+                    <strong>Crimes</strong> - Shows the number of crimes that have been reported in the selected period of time.
+                    <br />
+                    <br />
+                    <strong>Oxygen leaks</strong> - Shows the number of oxygen leaks that have been reported in the selected period of time.
+                    <br />
+                    <br />
+                    <strong>Population</strong> - Shows the number of people that have been reported in the selected period of time.
+                    <br />
+                    <br />
+                    <strong>Medical dispaches</strong> - Shows the number of medical dispaches that have been reported in the selected period of time.
+                    <br />
+                    <br />
+                    <strong>Meteor Showers</strong> - Shows the number of meteor showers that have been reported in the selected period of time.
+                    <br />
+                    <br />
+                    <strong>Dust Storms</strong> - Shows the number of dust storms that have been reported in the selected period of time.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

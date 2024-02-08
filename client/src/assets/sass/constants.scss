@@ -1,0 +1,200 @@
+//GLOBAL
+
+  :root {
+    --background: url("../../images/stars.jpg");
+    --background-repeat: no-repeat !important;
+    --background-size: cover !important;
+
+    --primary-color: #663926;
+    --secondary-color: #C67B5C;
+    --tertiary-color: #3d2117;
+  }
+
+
+[color-theme="dark"] {
+    --background: black;
+    --primary-color: #3f3f3f;
+    --secondary-color: #8a8a8a;
+    --tertiary-color: #1f1f1f;
+}
+
+$background-color: var(--background);
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiary-color);
+
+$primary-font-color: hsl(142deg, 10%, 75%);
+$secondary-font-color: $secondary-color;
+$tertiary-font-color: black;
+
+$primary-font-family: Arial, sans-serif;
+
+
+
+
+// NAV
+$nav-background-color: $primary-color;
+$nav-font-color: $primary-font-color;
+$nav-border-color: $primary-font-color;
+$nav-font-family: $primary-font-family;
+
+//HEADER
+$header-background-color: $tertiary-color;
+$header-font-color: $primary-font-color;
+$header-font-family: $primary-font-family;
+
+// OTHER
+$border-radius: 2rem;
+$transition-time: 1.5s;
+$box-shadow: 0rem 0rem 2rem 0px black;
+
+$themes: (
+        default: (
+                text: white,
+        ),
+        dark: (
+                text: black,
+        ),
+);
+
+@mixin checkbox {
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px "Open Sans", Arial, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  input[type="checkbox"]:hover + label:hover {
+    color: $secondary-color;
+  }
+  input[type="checkbox"]:hover + label:before {
+    background: $secondary-color;
+    box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+  }
+  input[type="checkbox"] + label:last-child {
+    margin-bottom: 0;
+  }
+  input[type="checkbox"] + label:before {
+    content: "";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #343a3f;
+    border-radius: 0.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+    transition: all 0.2s, background 0.2s ease-in-out;
+    background: #f3f3f3;
+  }
+  input[type="checkbox"]:checked + label:before {
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 0.2em;
+    border: 2px solid #fff;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background: $secondary-color;
+    box-shadow: 0 0 0 1px #000;
+  }
+}
+
+
+@mixin slider {
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked+.slider {
+    background-color: $secondary-color;
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+@mixin dropdown {
+  .dropbtn {
+    background-color: $secondary-color;
+    color: $tertiary-font-color;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 9rem;
+    z-index: 1;
+  }
+
+  .dropdown-content p {
+    color: $tertiary-font-color;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: block;
+    background-color: $secondary-color;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #ccc;
+  }
+}

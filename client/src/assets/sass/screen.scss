@@ -1,0 +1,179 @@
+@import "constants";
+@import "general";
+@import "map";
+@import "animations";
+
+body {
+    background-color: gray;
+    font-family: $primary-font-family;
+        header {
+            margin-top: 1rem;
+            width: 63vw;
+            z-index: 2;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+
+            .menu {
+                font-size: 2.5rem;
+                height: 2.5rem;
+                padding: 0.3rem 0.4rem;
+                margin-left: 2rem;
+                background: white;
+                border-radius: 2rem;
+            }
+
+            #searchbar {
+                line-height: 3rem;
+                height: 3rem;
+                width: 26vw;
+                background-color: white;
+                border-radius: $border-radius;
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    font-size: 1.2rem;
+                    width: 80%;
+                    padding-left: 1.3rem;
+                    vertical-align: center;
+                    border-radius: $border-radius;
+                }
+                input:focus {
+                    outline: none;
+                }
+                button {
+                    background-color: white;
+                    border: none;
+                    border-radius: 2rem;
+
+                    .search {
+                        font-size: 2rem;
+                    }
+                }
+                .center {
+                    line-height: 3rem;
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
+                    font-size: 2rem;
+                }
+            }
+            #suggestions {
+                width: 26vw;
+                margin-top: 0.5rem;
+                line-height: 2rem;
+                text-align: center;
+                border-radius: 1rem;
+                @include animationsuggestionsmap;
+                p {
+                    display: inline-block;
+                    color: $primary-font-color;
+                }
+                li{
+                    border-radius: 1rem;
+                    margin-bottom: 0.25rem;
+                    p{
+                        line-height: 1.5rem;
+                    }
+                }
+                li:nth-child(odd) {
+                    background-color: $primary-color;
+                }
+                li:nth-child(even) {
+                    background-color: $secondary-color;
+                    p {
+                        color: $tertiary-font-color;
+                    }
+                }
+            }
+        }
+    }
+@-moz-keyframes slide /* Firefox */
+{
+    from {width: 0;}
+    to {width: 17rem;}
+}
+
+@-webkit-keyframes slide /* Safari and Chrome */
+{
+    from {width: 0;}
+    to {width: 17rem;}
+}
+
+
+@-ms-keyframes slide /* IE10 */
+{
+    from {width: 0;}
+    to {width: 17rem;}
+}
+
+@keyframes slide
+{
+    from {width: 0;}
+    to {width: 17rem;}
+}
+
+
+@keyframes fade
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+
+    main {
+        #side_navigation {
+            -moz-animation: slide 1s forwards;
+            -webkit-animation: slide 1s forwards;
+            -o-animation: slide 1s forwards;
+            -ms-animation: slide 1s forwards;
+            z-index: 2;
+            position: fixed;
+            height: 100vh;
+            background-color: $primary-color;
+            border-radius: 0 2rem 0 0;
+
+
+            .flexcontainer {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    position: relative;
+                    padding-left: 2rem;
+                    height: 7rem;
+                    width: auto;
+
+                    a {
+                        display: flex;
+                        padding: 2.25rem 0;
+                        align-items: center;
+                    }
+                    .icon {
+                        animation: fade 3s;
+                        padding-right: 2rem;
+                        font-size: 2.5rem;
+                    }
+                    h2 {
+                        animation: fade 3s;
+                        color: $primary-font-color;
+                        font-size: 1.7rem;
+                    }
+                }
+                li:nth-child(even) {
+                    background-color: $secondary-color;
+                }
+                li:nth-child(1) {
+                    position: relative;
+
+                    .close {
+                        position: absolute;
+                        top: 1rem;
+                        right: 0;
+                    }
+                }
+            }
+        }
+}

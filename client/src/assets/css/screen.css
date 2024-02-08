@@ -1,0 +1,396 @@
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blur main > * {
+  filter: blur(0.2rem);
+}
+.blur main .popup {
+  filter: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: white solid 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem grey;
+  border-radius: 5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes fade-inout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translateX(-3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+#map {
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+#map leaflet-top leaflet-right {
+  margin-top: 1rem;
+}
+#map leaflet-top leaflet-right .leaflet-control {
+  margin-top: 0;
+}
+#map .selected {
+  animation: fade-inout 1.2s infinite alternate;
+}
+#map .circle {
+  z-index: 5;
+}
+
+.loading {
+  display: none;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes fade-inout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translateX(-3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+body {
+  background-color: gray;
+  font-family: Arial, sans-serif;
+}
+body header {
+  margin-top: 1rem;
+  width: 63vw;
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+body header .menu {
+  font-size: 2.5rem;
+  height: 2.5rem;
+  padding: 0.3rem 0.4rem;
+  margin-left: 2rem;
+  background: white;
+  border-radius: 2rem;
+}
+body header #searchbar {
+  line-height: 3rem;
+  height: 3rem;
+  width: 26vw;
+  background-color: white;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+body header #searchbar input {
+  font-size: 1.2rem;
+  width: 80%;
+  padding-left: 1.3rem;
+  vertical-align: center;
+  border-radius: 2rem;
+}
+body header #searchbar input:focus {
+  outline: none;
+}
+body header #searchbar button {
+  background-color: white;
+  border: none;
+  border-radius: 2rem;
+}
+body header #searchbar button .search {
+  font-size: 2rem;
+}
+body header #searchbar .center {
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+body header #suggestions {
+  width: 26vw;
+  margin-top: 0.5rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+body header #suggestions li {
+  animation: appear 0.3s ease 1 both;
+}
+body header #suggestions li:nth-child(2) {
+  animation-delay: 0.15s;
+}
+body header #suggestions li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+body header #suggestions li:nth-child(4) {
+  animation-delay: 0.45s;
+}
+body header #suggestions li:nth-child(5) {
+  animation-delay: 0.6s;
+}
+body header #suggestions li:nth-child(6) {
+  animation-delay: 0.75s;
+}
+@keyframes appear {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+body header #suggestions p {
+  display: inline-block;
+  color: hsl(142deg, 10%, 75%);
+}
+body header #suggestions li {
+  border-radius: 1rem;
+  margin-bottom: 0.25rem;
+}
+body header #suggestions li p {
+  line-height: 1.5rem;
+}
+body header #suggestions li:nth-child(odd) {
+  background-color: var(--primary-color);
+}
+body header #suggestions li:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+body header #suggestions li:nth-child(even) p {
+  color: black;
+}
+
+@-moz-keyframes slide /* Firefox */ {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17rem;
+  }
+}
+@-webkit-keyframes slide /* Safari and Chrome */ {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17rem;
+  }
+}
+@-ms-keyframes slide /* IE10 */ {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17rem;
+  }
+}
+@keyframes slide {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17rem;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main #side_navigation {
+  -moz-animation: slide 1s forwards;
+  -webkit-animation: slide 1s forwards;
+  -o-animation: slide 1s forwards;
+  -ms-animation: slide 1s forwards;
+  z-index: 2;
+  position: fixed;
+  height: 100vh;
+  background-color: var(--primary-color);
+  border-radius: 0 2rem 0 0;
+}
+main #side_navigation .flexcontainer {
+  display: flex;
+  flex-direction: column;
+}
+main #side_navigation .flexcontainer li {
+  position: relative;
+  padding-left: 2rem;
+  height: 7rem;
+  width: auto;
+}
+main #side_navigation .flexcontainer li a {
+  display: flex;
+  padding: 2.25rem 0;
+  align-items: center;
+}
+main #side_navigation .flexcontainer li .icon {
+  animation: fade 3s;
+  padding-right: 2rem;
+  font-size: 2.5rem;
+}
+main #side_navigation .flexcontainer li h2 {
+  animation: fade 3s;
+  color: hsl(142deg, 10%, 75%);
+  font-size: 1.7rem;
+}
+main #side_navigation .flexcontainer li:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+main #side_navigation .flexcontainer li:nth-child(1) {
+  position: relative;
+}
+main #side_navigation .flexcontainer li:nth-child(1) .close {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+
+/*# sourceMappingURL=screen.css.map */

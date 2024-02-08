@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Company</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="assets/css/company.css" />
+    <link rel="icon" type="image/x-icon" href="assets/media/logo_GeoAid.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="assets/js/company.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"
+              ><img src="assets/media/logo_GeoAid.png" alt="logo"
+            /></a>
+          </li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li class="selected"><a href="company.html">Company</a></li>
+          <li><a href="localisation.html">Localisation</a></li>
+          <li><a href="contact.html">About us</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="index.html">Back to map</a></li>
+          <li>
+            <a href="profile.html" class="material-icons icon account_circle">account_circle</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="statistics">
+        <div class="material-icons icon help" data-help="company">help</div>
+        <h3>Company Statistics</h3>
+        <div class="flexcontainer">
+          <aside>
+            <ul>
+              <li id="revenue" class="selected">
+                <p>Revenue</p>
+                <hr />
+              </li>
+              <li id="profit">
+                <p>Profit</p>
+                <hr />
+              </li>
+              <li id="costs">
+                <p>Costs</p>
+                <hr />
+              </li>
+              <li id="employees">
+                <p>Employees</p>
+                <hr />
+              </li>
+              <li id="sales">
+                <p>Sales</p>
+                <hr />
+              </li>
+            </ul>
+          </aside>
+          <section id="company-chart">
+            <h4>Revenue</h4>
+            <div class="material-icons fullscreen">fullscreen</div>
+            <div class="material-icons fullscreen-exit hidden">
+              fullscreen_exit
+            </div>
+            <div id="line-chart-container"></div>
+          </section>
+          <div id="years">
+            <form>
+              <input type="checkbox" id="2022" name="2022" checked />
+              <label for="2022">2022</label>
+              <input type="checkbox" id="2021" name="2021" />
+              <label for="2021">2021</label>
+              <input type="checkbox" id="2020" name="2020" />
+              <label for="2020">2020</label>
+              <input type="checkbox" id="2019" name="2019" />
+              <label for="2019">2019</label>
+              <input type="checkbox" id="2018" name="2018" />
+              <label for="2018">2018</label>
+            </form>
+          </div>
+        </div>
+      </article>
+      <article id="adds">
+        <header>
+          <div class="material-icons icon help" data-help="ads">help</div>
+          <h3>Targeted ads</h3>
+        </header>
+        <p>
+          Do you want to promote your business? <br />
+          Pay here for targeted ads to get your business in front of our
+          audience.
+        </p>
+        <form action="#">
+          <fieldset>
+            <legend>
+              <h4>Add effectiveness</h4>
+            </legend>
+            <label for="amount">Sale amount</label>
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              placeholder="Current Amount: 10.000 Marscoins/month"
+            />
+            <button type="submit">Buy</button>
+          </fieldset>
+        </form>
+      </article>
+      <div id="popup-company" class="popup hidden">
+        <div class="material-icons icon close">close</div>
+        <h2>Company statistics</h2>
+        <div class="content">
+          <p>
+            Here you can see your company statistics. You can filter on the year
+            and other topics like Revenue, Profit, etc.
+          </p>
+        </div>
+      </div>
+      <div id="popup-ads" class="popup hidden">
+        <div class="material-icons icon close">close</div>
+        <h2>Targeted Ads</h2>
+        <div class="content">
+          <p>
+            The amount of sales you want to achieve with the ad. <br />
+            The higher the amount, the more expensive the ad will be.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

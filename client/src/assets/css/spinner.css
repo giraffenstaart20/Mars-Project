@@ -1,0 +1,116 @@
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blur main > * {
+  filter: blur(0.2rem);
+}
+.blur main .popup {
+  filter: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: white solid 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem grey;
+  border-radius: 5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+.spinner-wave-in {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3.125px solid hsl(142deg, 10%, 75%);
+  animation: spinner 1.2s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-wave-in {
+  box-shadow: inset -1.5625px -1.5625px 0 1.5625px var(--secondary-color);
+}
+
+/*# sourceMappingURL=spinner.css.map */

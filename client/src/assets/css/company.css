@@ -1,0 +1,565 @@
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blur main > * {
+  filter: blur(0.2rem);
+}
+.blur main .popup {
+  filter: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: white solid 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem grey;
+  border-radius: 5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: black solid;
+  background-color: var(--primary-color);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  font-size: 1.7rem;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+nav ul li a {
+  font-family: Arial, sans-serif;
+  color: hsl(142deg, 10%, 75%);
+}
+nav ul li .icon {
+  color: hsl(142deg, 10%, 75%);
+}
+nav ul li:nth-child(7) a {
+  border-bottom: hsl(142deg, 10%, 75%) solid;
+}
+nav ul li:first-child img {
+  width: 5rem;
+}
+nav ul .icon {
+  font-size: 4rem;
+}
+nav ul .selected {
+  font-weight: bold;
+}
+nav ul .selected a {
+  color: var(--secondary-color);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes fade-inout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translateX(-3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  cursor: default;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blur main > * {
+  filter: blur(0.2rem);
+}
+.blur main .popup {
+  filter: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+input:focus, textarea:focus {
+  outline: white solid 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem grey;
+  border-radius: 5rem;
+  background-color: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+:root {
+  --background: url("../../images/stars.jpg");
+  --background-repeat: no-repeat !important;
+  --background-size: cover !important;
+  --primary-color: #663926;
+  --secondary-color: #C67B5C;
+  --tertiary-color: #3d2117;
+}
+
+[color-theme=dark] {
+  --background: black;
+  --primary-color: #3f3f3f;
+  --secondary-color: #8a8a8a;
+  --tertiary-color: #1f1f1f;
+}
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 35%;
+  width: 40%;
+  overflow: auto;
+  background-color: var(--secondary-color);
+  border: 0.3rem solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 2rem 0px black;
+}
+.popup h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.popup p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+.popup br {
+  display: block;
+  content: "";
+  margin-top: 0.5rem;
+}
+.popup .close {
+  position: absolute;
+  font-size: 2rem;
+  top: 0.8rem;
+  right: 0.5rem;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    display: block;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.slide-out {
+  display: block;
+  opacity: 1;
+  transform: translateY(0%);
+  animation: slideOut 0.5s ease-in-out forwards;
+}
+
+@keyframes slideOut {
+  to {
+    z-index: -1;
+    display: none;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+body {
+  background: var(--background);
+  font-family: Arial, sans-serif;
+}
+body main {
+  margin: 0 4rem 2rem 4rem;
+}
+body main #statistics {
+  height: 76vh;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+}
+body main #statistics .help {
+  position: absolute;
+  color: hsl(142deg, 10%, 75%);
+  top: 1.3rem;
+  right: 2rem;
+}
+body main #statistics h3 {
+  background-color: var(--tertiary-color);
+  color: hsl(142deg, 10%, 75%);
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem;
+  font-size: 2rem;
+}
+body main #statistics .flexcontainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  height: 75%;
+  border-radius: 0 0 2rem 2rem;
+}
+body main #statistics .flexcontainer aside {
+  margin-left: 2rem;
+  padding-top: 2rem;
+  flex-basis: 20%;
+  background-color: var(--primary-color);
+  color: hsl(142deg, 10%, 75%);
+  border-radius: 2rem;
+  box-shadow: 0rem 0rem 2rem 0px black;
+}
+body main #statistics .flexcontainer aside ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+body main #statistics .flexcontainer aside ul li {
+  color: hsl(142deg, 10%, 75%);
+  font-size: 1.5rem;
+}
+body main #statistics .flexcontainer aside ul li:hover {
+  color: var(--secondary-color);
+}
+body main #statistics .flexcontainer aside ul .selected {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+body main #statistics .flexcontainer aside ul hr {
+  height: 0.15rem;
+  background-color: hsl(142deg, 10%, 75%);
+  border: none;
+}
+body main #statistics .flexcontainer #company-chart {
+  position: relative;
+  flex-basis: 50%;
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  box-shadow: 0rem 0rem 2rem 0px black;
+  padding: 1rem;
+}
+body main #statistics .flexcontainer #company-chart h4 {
+  font-size: 2rem;
+  color: hsl(142deg, 10%, 75%);
+  margin-bottom: 0.5rem;
+}
+body main #statistics .flexcontainer #company-chart #bar-chart-container {
+  height: 90%;
+  width: 100%;
+}
+body main #statistics .flexcontainer #company-chart .material-icons {
+  color: hsl(142deg, 10%, 75%);
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+body main #statistics .flexcontainer #years {
+  color: hsl(142deg, 10%, 75%);
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-right: 2rem;
+  flex-basis: 15%;
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  box-shadow: 0rem 0rem 2rem 0px black;
+}
+body main #statistics .flexcontainer #years input[type=checkbox] {
+  display: none;
+}
+body main #statistics .flexcontainer #years input[type=checkbox] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font: 14px/20px "Open Sans", Arial, sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+body main #statistics .flexcontainer #years input[type=checkbox]:hover + label:hover {
+  color: var(--secondary-color);
+}
+body main #statistics .flexcontainer #years input[type=checkbox]:hover + label:before {
+  background: var(--secondary-color);
+  box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+}
+body main #statistics .flexcontainer #years input[type=checkbox] + label:last-child {
+  margin-bottom: 0;
+}
+body main #statistics .flexcontainer #years input[type=checkbox] + label:before {
+  content: "";
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #343a3f;
+  border-radius: 0.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+  transition: all 0.2s, background 0.2s ease-in-out;
+  background: #f3f3f3;
+}
+body main #statistics .flexcontainer #years input[type=checkbox]:checked + label:before {
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 0.2em;
+  border: 2px solid #fff;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background: var(--secondary-color);
+  box-shadow: 0 0 0 1px #000;
+}
+body main #statistics .flexcontainer #years form {
+  flex-direction: column;
+  display: inline-block;
+}
+body main #adds {
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  position: relative;
+}
+body main #adds .help {
+  position: absolute;
+  color: hsl(142deg, 10%, 75%);
+  top: 1.3rem;
+  right: 2rem;
+}
+body main #adds header h3 {
+  color: hsl(142deg, 10%, 75%);
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: var(--tertiary-color);
+}
+body main #adds p {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+body main #adds form {
+  background-color: var(--primary-color);
+  margin: 0 2rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0rem 0rem 2rem 0px black;
+}
+body main #adds form fieldset {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  color: hsl(142deg, 10%, 75%);
+}
+body main #adds form fieldset h4 {
+  text-align: left;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+body main #adds form fieldset label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+body main #adds form fieldset input {
+  border-radius: 2rem;
+  background-color: darkgray;
+  color: black;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  padding: 0.2rem 0.2rem 0.2rem 1rem;
+  margin-bottom: 1rem;
+}
+body main #adds form fieldset button {
+  color: hsl(142deg, 10%, 75%);
+  padding: 0.5rem;
+  background-color: var(--tertiary-color);
+  border-radius: 2rem;
+}
+
+/*# sourceMappingURL=company.css.map */

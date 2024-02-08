@@ -1,0 +1,714 @@
+openapi: 3.0.3
+info:
+  title: 'GeoAid'
+  description: 'GeoAid is een slimme kaart waarop je kan zien waar de meeste gevaren voorkomen. Bedrijven kunnen premium zien waar ze het best hun bedrijf vestigen aan de hand van statistieken en andere info. '
+  version: 0.0.4
+servers:
+  - url: https://project-ii.ti.howest.be/mars-18
+    description: 'Public API'
+  - url: http://localhost:8080/
+    description: 'Local API'
+paths:
+  /api/quotes:
+    post:
+      description: Create a nice quote
+      operationId: createQuote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quote:
+                  type: string
+              required:
+                - quote
+            examples:
+              the-future:
+                value:
+                  quote: The future depends on what you do today.
+                description: You can't argue with the wise guy Mahatma Gandhi, can you?
+          text/plain:
+            schema:
+              type: string
+              example: "If everybody minded their own business, the world would go around a great deal faster than it does."
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/quote'
+  /api/quotes/{quoteId}:
+    get:
+      description: Get a nice quote
+      operationId: getQuote
+      parameters:
+        - in: path
+          name: quoteId
+          required: true
+          schema:
+            type: integer
+          description: The quote id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/quote'
+              examples:
+                two infinite things:
+                  value:
+                    value: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+                    id: 21
+                  description: Albert Einstein at his best :)
+                finding magic:
+                  value:
+                    value: "Those who don't believe in magic will never find it."
+                    id: 34
+                  description: Who doesn't love Roald Dahl?
+    put:
+      description: Update nice quote
+      operationId: updateQuote
+      parameters:
+        - in: path
+          name: quoteId
+          required: true
+          schema:
+            type: integer
+          description: The quote ID
+          example: 42
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quote:
+                  type: string
+              required:
+                - quote
+            examples:
+              dragons exist:
+                value:
+                  quote: "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten."
+                description: Neil Gaiman, from the book Coraline
+              mistakes do something:
+                value:
+                  quote: "I hope that in this year to come, you make mistakes. Because if you are making mistakes... you're Doing Something."
+                description: Neil Gaiman is a genius.
+      responses:
+        '200':
+          description: Created
+    delete:
+      description: Delete nice quote
+      operationId: deleteQuote
+      parameters:
+        - in: path
+          name: quoteId
+          required: true
+          schema:
+            type: integer
+          description: The quote Id
+          example: 55
+      responses:
+        '200':
+          description: Deleted
+
+  /api/domes:
+    get:
+      description: get all the domes
+      operationId: getDomes
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  domes:
+                    $ref: '#/components/schemas/domes'
+  /api/users:
+    get:
+      description: get all users
+      operationId: getUsers
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    $ref: '#/components/schemas/users'
+  /api/companies:
+    get:
+      description: get all companies
+      operationId: getCompanies
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  companies:
+                    $ref: '#/components/schemas/companies'
+  /api/company/{userId}:
+    get:
+      description: get a company by userId
+      operationId: getCompany
+      tags: [ GeoAid ]
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: integer
+          description: the user id
+          example: 5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/company'
+  /api/oxygenLeaks:
+    get:
+      description: get all oxygenLeaks
+      operationId: getOxygenLeaks
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  oxygenLeaks:
+                    $ref: '#/components/schemas/oxygenLeaks'
+  /api/population:
+    get:
+      description: get population
+      operationId: getPopulation
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  population:
+                    $ref: '#/components/schemas/allPopulation'
+  /api/appointments:
+    get:
+      description: get appointments
+      operationId: getAppointments
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  appointment:
+                    $ref: '#/components/schemas/allAppointments'
+  /api/appointment:
+    post:
+      description: make a appointment
+      operationId: createAppointment
+      tags: [ GeoAid ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  format: date
+                time:
+                  type: string
+                topic:
+                  type: string
+                employee_name:
+                  type: string
+                expertise:
+                  type: string
+              required:
+                - date
+                - time
+                - topic
+                - employee_name
+                - expertise
+      responses:
+        '201':
+          description: created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/appointment'
+  /api/appointment/{appointmentId}:
+    delete:
+      description: delete appointment
+      operationId: deleteAppointment
+      tags: [ GeoAid ]
+      parameters:
+        - in: path
+          name: appointmentId
+          required: true
+          schema:
+            type: integer
+          description: The appointment Id
+          example: 55
+      responses:
+        '200':
+          description: Deleted
+  /api/medicalDispatches:
+    get:
+      description: get all medicalDispatches
+      operationId: getMedicalDispatches
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  oxygenLeaks:
+                    $ref: '#/components/schemas/allMedicalDispatches'
+  /api/meteorShowers:
+    get:
+      description: get all meteor showers
+      operationId: getMeteorShowers
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  meteorShowers:
+                    $ref: '#/components/schemas/meteorShowers'
+  /api/dustStorms:
+    get:
+      description: get all dust storms
+      operationId: getDustStorms
+      tags: [ GeoAid ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dustStorms:
+                    $ref: '#/components/schemas/dustStorms'
+
+
+components:
+  schemas:
+    quote:
+      type: object
+      properties:
+        value:
+          type: string
+          x-faker: lorem.sentence
+          example: "Life is a disease: sexually transmitted, and invariably fatal."
+        id:
+          type: integer
+          minimum: 1
+          example: 8
+      required:
+        - value
+        - id
+      example:
+        value: See, the problem is that God gives men a brain and a penis, and only enough blood to run one at a time.
+        id: 89
+    user:
+      type: object
+      properties:
+        firstName:
+          type: string
+          example: "bob"
+        lastName:
+          type: string
+          example: "Debouwer"
+        homeAddress: 
+          type: string
+          example: "102 mainStreet"
+        id:
+          type: integer
+          minimum: 0
+          example: 1400
+      required:
+        - firstName
+        - lastName
+        - homeAddress
+        - id
+      example:
+        firstName: "John"
+        lastName: "Doe"
+        homeAddress: "15 secondStreet"
+        id: 3
+    users:
+      type: array
+      items:
+        $ref: '#/components/schemas/user'
+    dome:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 1
+        domeName:
+          type: string
+          example: "Dome 1"
+        latitude:
+          type: number
+          example: -23.892979149921235
+        longitude:
+          type: number
+          example: -69.12855148315431
+      required:
+        - id
+        - domeName
+        - latitude
+        - longitude
+      example:
+        id: 3
+        domeName: "dome 3"
+        latitude: -23.892979149921235
+        longitude: -69.69
+    domes:
+      type: array
+      items: 
+        $ref: '#/components/schemas/dome'
+    company:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 32
+        name:
+          type: string
+          example: "chestbook"
+        section:
+          type: string
+          example: "social media"
+        ad-effectiveness:
+          type: integer
+          example: 40
+        userId:
+          type: integer
+          example: 5
+      required:
+        - Id
+        - name
+        - section
+        - ad-effectiveness
+        - userId
+      example:
+        id: 69
+        name: "Events United"
+        section: "social"
+        ad-effectiveness: 69
+        userId: 420
+    companies:
+      type: array
+      items:
+        $ref: '#/components/schemas/company'
+    oxygenLeak:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 34
+        dangerLevel:
+          type: string
+          example: "MEDIUM"
+        domeId:
+          type: integer
+          minimum: 0
+          example: 3
+        date:
+          type: string
+          format: date
+          example: "2022-01-01"
+        latitude:
+          type: number
+          example: -23.892979149921235
+        longitude:
+          type: number
+          example: -69.12855148315431
+        dome:
+          type: array
+          items:
+            $ref: '#/components/schemas/dome'
+      required:
+        - id
+        - dangerLevel
+        - domeId
+        - date
+        - latitude
+        - longitude
+        - dome
+      example:
+        id: 420
+        dangerLevel: "HIGH"
+        domeId: 69
+        date: "2022-01-01"
+        latitude: -23.8929
+        longitude: -69.12855148315431
+    oxygenLeaks:
+      type: array
+      items:
+        $ref: '#/components/schemas/oxygenLeak'
+    population:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 12
+        size:
+          type: integer
+          minimum: 0
+          example: 6
+        date:
+          type: string
+          format: date
+          example: "2022-01-01"
+        latitude:
+          type: number
+          example: -23.892979149921235
+        longitude:
+          type: number
+          example: -69.12855148315431
+        colony:
+          type: string
+          example: "MINE"
+      required:
+        - id
+        - size
+        - date
+        - latitude
+        - longitude
+        - colony
+      example:
+        id: 13
+        size: 24
+        date: "2022-02-02"
+        latitude: -23.892979149921235
+        longitude: -69.16548798432154
+        colony: "SURFACE"
+    allPopulation:
+      type: array
+      items:
+        $ref: '#/components/schemas/population'
+    appointment:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 12
+        date:
+          type: string
+          format: date
+          example: "2022-01-01"
+        time:
+          type: string
+          example: "13:00:00"
+        topic:
+          type: string
+          example: "location"
+        employee_name:
+          type: string
+          example: "bob"
+        expertise:
+          type: string
+          example: "sales"
+      required:
+        - id
+        - date
+        - time
+        - topic
+        - employee_name
+        - expertise
+      example:
+        id: 54
+        date: "2022-01-01"
+        time: "14:15:00"
+        topic: "best location"
+        employee_name: "John"
+        expertise: "front end"
+    allAppointments:
+      type: array
+      items:
+        $ref: '#/components/schemas/appointment'
+    medicalDispatch:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 34
+        dispatchType:
+          type: string
+          example: "AMBULANCE"
+        domeId:
+          type: integer
+          minimum: 0
+          example: 3
+        date:
+          type: string
+          format: date
+          example: "2022-01-01"
+        latitude:
+          type: number
+          example: -23.892979149921235
+        longitude:
+          type: number
+          example: -69.12855148315431
+        dome:
+          type: array
+          items:
+            $ref: '#/components/schemas/dome'
+      required:
+        - id
+        - dangerLevel
+        - domeId
+        - date
+        - latitude
+        - longitude
+        - dome
+      example:
+        id: 420
+        dangerLevel: "HIGH"
+        domeId: 69
+        date: "2022-01-01"
+        latitude: -23.8929
+        longitude: -69.12855148315431
+    allMedicalDispatches:
+      type: array
+      items:
+        $ref: '#/components/schemas/medicalDispatch'
+    meteorShower:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 34
+        damageLevel:
+          type: string
+          example: "HIGH"
+        domeId:
+          type: integer
+          minimum: 0
+          example: 3
+        date:
+          type: string
+          format: date
+          example: "2022-01-01"
+        latitude:
+          type: number
+          example: -23.892979149921235
+        longitude:
+          type: number
+          example: -69.12855148315431
+        dome:
+          type: array
+          items:
+            $ref: '#/components/schemas/dome'
+      required:
+        - id
+        - damageLevel
+        - domeId
+        - date
+        - latitude
+        - longitude
+        - dome
+      example:
+        id: 420
+        damageLevel: "HIGH"
+        domeId: 69
+        date: "2022-01-01"
+        latitude: -23.8929
+        longitude: -69.12855148315431
+    meteorShowers:
+      type: array
+      items:
+        $ref: '#/components/schemas/meteorShower'
+    dustStorm:
+      type: object
+      properties:
+        id:
+          type: integer
+          minimum: 0
+          example: 34
+        damageLevel:
+          type: string
+          example: "LOW"
+        domeId:
+          type: integer
+          minimum: 0
+          example: 3
+        date:
+          type: string
+          format: date
+          example: "2022-01-01"
+        latitude:
+          type: number
+          example: -23.892979149921235
+        longitude:
+          type: number
+          example: -69.12855148315431
+        dome:
+          type: array
+          items:
+            $ref: '#/components/schemas/dome'
+      required:
+        - id
+        - damageLevel
+        - domeId
+        - date
+        - latitude
+        - longitude
+        - dome
+      example:
+        id: 420
+        damageLevel: "MEDIUM"
+        domeId: 69
+        date: "2022-01-01"
+        latitude: -23.8929
+        longitude: -69.12855148315431
+    dustStorms:
+      type: array
+      items:
+        $ref: '#/components/schemas/dustStorm'
